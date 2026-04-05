@@ -5,7 +5,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FlashTréso — Avance de trésorerie pour commerçants</title>
-<meta name="description" content="Obtenez une avance de 2 000 à 100 000 € sur votre compte professionnel en 24–48h. Sans garantie. Sans caution.">
+<meta name="description" content="FlashTréso défend votre dossier auprès de partenaires financiers spécialisés. Avance de trésorerie 2 000 à 100 000 € en 24–48h. Sans garantie, sans caution, sans immobiliser vos actifs. Pour commerçants en France.">
+<meta name="keywords" content="avance trésorerie, financement commerçant, crédit sans garantie, trésorerie rapide, financement restaurant, financement salon coiffure, cash advance France, FlashTréso, apporteur affaires financement">
+<meta name="author" content="FlashTréso — JY Capital Consulting Ltd">
+<meta name="robots" content="index, follow">
+<meta name="language" content="French">
+
+<!-- Open Graph / Facebook -->
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flashtreso.com/">
+<meta property="og:title" content="FlashTréso — Avance de trésorerie pour commerçants">
+<meta property="og:description" content="Votre banque vous a dit non ? Nous vous disons oui. Avance de 2 000 à 100 000 € en 24–48h. Sans garantie. Sans caution. FlashTréso défend votre dossier.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="FlashTréso">
+
+<!-- Twitter Card -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://flashtreso.com/">
+<meta name="twitter:title" content="FlashTréso — Avance de trésorerie pour commerçants">
+<meta name="twitter:description" content="Votre banque vous a dit non ? Nous vous disons oui. Avance de 2 000 à 100 000 € en 24–48h. Sans garantie. Sans caution.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80">
+
+<!-- Schema.org JSON-LD -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "FlashTréso",
+  "url": "https://flashtreso.com",
+  "logo": "https://flashtreso.com/logo.png",
+  "description": "FlashTréso met en relation les commerçants avec des partenaires financiers spécialisés pour obtenir une avance de trésorerie rapide sans garantie.",
+  "areaServed": "FR",
+  "availableLanguage": "French",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@flashtreso.com",
+    "contactType": "customer service",
+    "availableLanguage": "French"
+  },
+  "sameAs": [
+    "https://flashtreso.com"
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -185,6 +232,48 @@ text-decoration:none; font-size:1.1rem;
 transition:all 0.2s;
 }
 .social-btn:hover { background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.3); transform:translateY(-2px); }
+
+/* VIDEO MODAL */
+.modal-overlay {
+display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+background:rgba(0,0,0,0.85); z-index:1000;
+align-items:center; justify-content:center;
+backdrop-filter:blur(6px);
+}
+.modal-overlay.active { display:flex; }
+.modal-box {
+position:relative; width:90%; max-width:420px;
+border-radius:20px; overflow:hidden;
+box-shadow:0 32px 80px rgba(0,0,0,0.6);
+}
+.modal-box iframe { width:100%; aspect-ratio:9/16; border:none; display:block; }
+.modal-close {
+position:absolute; top:12px; right:12px;
+width:36px; height:36px; border-radius:50%;
+background:rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.2);
+color:#ffffff; font-size:1.2rem; font-weight:700;
+display:flex; align-items:center; justify-content:center;
+cursor:pointer; z-index:10; line-height:1;
+transition:all 0.2s;
+}
+.modal-close:hover { background:rgba(255,255,255,0.15); }
+
+/* BOUTON PLAY */
+.play-btn {
+display:inline-flex; align-items:center; gap:10px;
+background:rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.25);
+color:#ffffff; font-weight:700; font-size:0.95rem;
+padding:14px 28px; border-radius:50px;
+cursor:pointer; transition:all 0.2s;
+margin-top:28px;
+}
+.play-btn:hover { background:rgba(255,255,255,0.18); transform:scale(1.03); }
+.play-icon {
+width:36px; height:36px; border-radius:50%;
+background:#FFD84D; display:flex; align-items:center; justify-content:center;
+color:#0B1120; font-size:0.9rem; flex-shrink:0;
+}
 
 /* VIDEO */
 .video-section { background:#0B1120; }
