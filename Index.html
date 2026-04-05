@@ -9,162 +9,180 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { font-family:'Plus Jakarta Sans',sans-serif; color:#ffffff; background:#0B1120; -webkit-font-smoothing:antialiased; }
+body { font-family:'Plus Jakarta Sans',sans-serif; color:#0B1120; background:#ffffff; -webkit-font-smoothing:antialiased; }
 .container { max-width:1100px; margin:0 auto; padding:0 32px; }
 
 /* NAV */
-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(11,17,32,0.97); border-bottom:1px solid rgba(255,255,255,0.08); padding:18px 0; backdrop-filter:blur(12px); }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(11,17,32,0.97); border-bottom:1px solid rgba(255,255,255,0.08); padding:16px 0; backdrop-filter:blur(12px); }
 .nav-inner { display:flex; align-items:center; justify-content:space-between; }
 .logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
-.logo-icon { width:44px; height:44px; }
-.logo-name { font-size:1.4rem; font-weight:800; color:#ffffff; letter-spacing:-0.3px; }
+.logo-icon { width:42px; height:42px; }
+.logo-name { font-size:1.35rem; font-weight:800; color:#ffffff; letter-spacing:-0.3px; }
 .logo-name span { color:#FFD84D; }
-.nav-links { display:flex; align-items:center; gap:32px; }
-.nav-link { color:rgba(255,255,255,0.6); font-size:0.9rem; font-weight:600; text-decoration:none; transition:color 0.2s; }
+.nav-links { display:flex; align-items:center; gap:28px; }
+.nav-link { color:rgba(255,255,255,0.6); font-size:0.88rem; font-weight:600; text-decoration:none; transition:color 0.2s; }
 .nav-link:hover { color:#ffffff; }
-.nav-cta { background:#FFD84D; color:#0B1120; font-weight:800; font-size:0.9rem; padding:12px 24px; border-radius:8px; text-decoration:none; transition:all 0.2s; }
+.nav-cta { background:#FFD84D; color:#0B1120; font-weight:800; font-size:0.88rem; padding:11px 22px; border-radius:8px; text-decoration:none; }
 .nav-cta:hover { background:#E8C030; }
 
-/* HERO */
-.hero { padding:160px 0 100px; background:linear-gradient(160deg,#0B1120 0%,#0d1a3a 50%,#0B1120 100%); position:relative; overflow:hidden; }
-.hero::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:radial-gradient(ellipse at 70% 50%,rgba(26,107,255,0.12) 0%,transparent 60%); pointer-events:none; }
-.hero-inner { display:grid; grid-template-columns:1fr 440px; gap:80px; align-items:center; position:relative; z-index:1; }
-
-.hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(46,196,160,0.12); border:1px solid rgba(46,196,160,0.3); color:#2EC4A0; font-size:0.8rem; font-weight:700; padding:7px 16px; border-radius:50px; margin-bottom:28px; }
+/* HERO — SOMBRE */
+.hero { padding:150px 0 90px; background:linear-gradient(160deg,#0B1120 0%,#0d1a3a 60%,#0B1120 100%); position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; top:0; right:0; bottom:0; left:50%; background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80') center/cover; opacity:0.12; }
+.hero-inner { display:grid; grid-template-columns:1fr 420px; gap:70px; align-items:center; position:relative; z-index:1; }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(46,196,160,0.15); border:1px solid rgba(46,196,160,0.35); color:#2EC4A0; font-size:0.78rem; font-weight:700; padding:7px 16px; border-radius:50px; margin-bottom:24px; }
 .dot { width:7px; height:7px; border-radius:50%; background:#2EC4A0; animation:pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-h1 { font-size:clamp(2.6rem,4.5vw,4rem); font-weight:900; line-height:1.06; letter-spacing:-1.5px; color:#ffffff; margin-bottom:24px; }
+h1 { font-size:clamp(2.4rem,4vw,3.8rem); font-weight:900; line-height:1.06; letter-spacing:-1.5px; color:#ffffff; margin-bottom:22px; }
 h1 .accent { color:#FFD84D; }
-.hero-sub { font-size:1.1rem; line-height:1.8; color:rgba(255,255,255,0.65); margin-bottom:40px; max-width:500px; font-weight:500; }
-.hero-sub strong { color:#ffffff; font-weight:700; }
-
-.btn-primary { display:inline-flex; align-items:center; gap:8px; background:#FFD84D; color:#0B1120; font-weight:800; font-size:1rem; padding:16px 32px; border-radius:10px; text-decoration:none; box-shadow:0 8px 32px rgba(255,216,77,0.3); transition:all 0.2s; }
+.hero-sub { font-size:1.05rem; line-height:1.8; color:rgba(255,255,255,0.65); margin-bottom:36px; max-width:480px; font-weight:500; }
+.hero-sub strong { color:#ffffff; }
+.btn-primary { display:inline-flex; align-items:center; gap:8px; background:#FFD84D; color:#0B1120; font-weight:800; font-size:1rem; padding:15px 30px; border-radius:10px; text-decoration:none; box-shadow:0 8px 28px rgba(255,216,77,0.35); transition:all 0.2s; }
 .btn-primary:hover { background:#E8C030; transform:translateY(-2px); }
-.btn-secondary { display:inline-flex; align-items:center; gap:8px; background:transparent; color:#ffffff; font-weight:700; font-size:1rem; padding:16px 32px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); text-decoration:none; transition:all 0.2s; }
-.btn-secondary:hover { background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.4); }
+.btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:#ffffff; font-weight:700; font-size:1rem; padding:15px 30px; border-radius:10px; border:1px solid rgba(255,255,255,0.25); text-decoration:none; transition:all 0.2s; }
+.btn-outline:hover { background:rgba(255,255,255,0.08); }
 .hero-btns { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:16px; }
-.hero-trust { font-size:0.8rem; color:rgba(255,255,255,0.35); font-weight:500; }
+.hero-trust { font-size:0.78rem; color:rgba(255,255,255,0.35); }
 
-.hero-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:36px 32px; backdrop-filter:blur(10px); }
-.hc-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:28px; }
-.hc-label { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.35); margin-bottom:6px; }
-.hc-amount { font-size:3.2rem; font-weight:900; color:#FFD84D; line-height:1; letter-spacing:-1px; }
-.hc-sub { font-size:0.82rem; color:rgba(255,255,255,0.4); margin-top:4px; }
-.hc-badge { background:rgba(46,196,160,0.15); border:1px solid rgba(46,196,160,0.3); color:#2EC4A0; font-size:0.75rem; font-weight:700; padding:6px 12px; border-radius:20px; white-space:nowrap; }
-.hc-divider { height:1px; background:rgba(255,255,255,0.08); margin-bottom:24px; }
-.hc-feats { display:flex; flex-direction:column; gap:12px; }
-.hc-feat { display:flex; align-items:center; gap:12px; font-size:0.88rem; color:rgba(255,255,255,0.8); font-weight:500; }
-.hc-feat-icon { width:32px; height:32px; border-radius:8px; background:rgba(26,107,255,0.15); display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0; }
-.hc-cta { display:block; margin-top:28px; background:#1A6BFF; color:#ffffff; font-weight:800; font-size:0.9rem; padding:14px; border-radius:10px; text-decoration:none; text-align:center; transition:all 0.2s; }
+/* HERO CARD */
+.hero-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:32px 28px; backdrop-filter:blur(10px); }
+.hc-label { font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.35); margin-bottom:6px; }
+.hc-amount { font-size:3rem; font-weight:900; color:#FFD84D; line-height:1; letter-spacing:-1px; }
+.hc-sub { font-size:0.8rem; color:rgba(255,255,255,0.4); margin:4px 0 20px; }
+.hc-divider { height:1px; background:rgba(255,255,255,0.08); margin-bottom:20px; }
+.hc-feats { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+.hc-feat { display:flex; align-items:center; gap:12px; font-size:0.86rem; color:rgba(255,255,255,0.8); font-weight:500; }
+.hc-feat-icon { width:30px; height:30px; border-radius:8px; background:rgba(26,107,255,0.2); display:flex; align-items:center; justify-content:center; font-size:0.85rem; flex-shrink:0; }
+.hc-cta { display:block; background:#1A6BFF; color:#ffffff; font-weight:800; font-size:0.88rem; padding:13px; border-radius:10px; text-decoration:none; text-align:center; }
 .hc-cta:hover { background:#0F4FCC; }
 
-/* STATS */
-.stats { background:rgba(255,255,255,0.03); border-top:1px solid rgba(255,255,255,0.07); border-bottom:1px solid rgba(255,255,255,0.07); padding:32px 0; }
+/* STATS — BLEU */
+.stats { background:#1A6BFF; padding:28px 0; }
 .stats-inner { display:flex; justify-content:center; flex-wrap:wrap; }
-.stat { text-align:center; padding:10px 48px; border-right:1px solid rgba(255,255,255,0.08); }
+.stat { text-align:center; padding:8px 44px; border-right:1px solid rgba(255,255,255,0.2); }
 .stat:last-child { border-right:none; }
-.stat-n { font-size:2rem; font-weight:900; color:#FFD84D; letter-spacing:-0.5px; }
-.stat-l { font-size:0.78rem; color:rgba(255,255,255,0.45); margin-top:4px; font-weight:500; }
+.stat-n { font-size:1.9rem; font-weight:900; color:#FFD84D; }
+.stat-l { font-size:0.75rem; color:rgba(255,255,255,0.75); margin-top:3px; font-weight:500; }
 
-/* SECTIONS */
-section { padding:90px 0; }
-.section-tag { display:inline-block; font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:2.5px; color:#2EC4A0; margin-bottom:14px; }
-h2 { font-size:clamp(2rem,3.5vw,2.8rem); font-weight:800; line-height:1.1; letter-spacing:-0.5px; color:#ffffff; margin-bottom:16px; }
-.section-lead { font-size:1.05rem; color:rgba(255,255,255,0.55); line-height:1.75; max-width:560px; margin-bottom:48px; font-weight:500; }
+/* SECTIONS BLANCHES */
+section { padding:88px 0; }
+.section-tag { display:inline-block; font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:2.5px; color:#1A6BFF; margin-bottom:12px; }
+h2 { font-size:clamp(1.9rem,3vw,2.7rem); font-weight:800; line-height:1.1; letter-spacing:-0.5px; color:#0B1120; margin-bottom:14px; }
+.section-lead { font-size:1rem; color:#6B7A99; line-height:1.75; max-width:560px; margin-bottom:44px; font-weight:500; }
 
-/* POURQUOI */
-.why { background:#0B1120; }
+/* PROBLÈME — BLANC */
+.why { background:#ffffff; }
 .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
-.why-text p { font-size:1rem; color:rgba(255,255,255,0.65); line-height:1.8; margin-bottom:16px; font-weight:500; }
-.why-features { display:flex; flex-direction:column; gap:14px; margin-top:32px; }
-.why-feat { display:flex; align-items:flex-start; gap:16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:18px 20px; transition:all 0.2s; }
-.why-feat:hover { background:rgba(26,107,255,0.08); border-color:rgba(26,107,255,0.2); }
-.why-feat-icon { width:40px; height:40px; border-radius:10px; background:rgba(26,107,255,0.15); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
-.why-feat-title { font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:4px; }
-.why-feat-desc { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.5; font-weight:500; }
-.why-visual { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:36px; }
-.wv-label { font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.3); margin-bottom:16px; }
-.wv-no { font-size:5rem; font-weight:900; color:#EF4444; line-height:1; margin-bottom:8px; letter-spacing:-2px; }
-.wv-bank { font-size:0.88rem; color:rgba(255,255,255,0.45); line-height:1.6; margin-bottom:28px; font-weight:500; font-style:italic; }
-.wv-divider { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
-.wv-line { flex:1; height:1px; background:rgba(255,255,255,0.1); }
-.wv-vs { font-size:0.7rem; font-weight:800; color:rgba(255,255,255,0.2); text-transform:uppercase; letter-spacing:3px; }
-.wv-yes { font-size:2.8rem; font-weight:900; color:#2EC4A0; line-height:1; margin-bottom:8px; letter-spacing:-1px; }
-.wv-ft { font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.65; font-weight:500; }
-.wv-ft strong { color:#FFD84D; font-weight:700; }
+.why-text p { font-size:0.98rem; color:#374151; line-height:1.8; margin-bottom:14px; }
+.why-features { display:flex; flex-direction:column; gap:12px; margin-top:28px; }
+.why-feat { display:flex; align-items:flex-start; gap:16px; background:#F8FAFF; border:1px solid #E8F0FF; border-radius:14px; padding:16px 18px; transition:all 0.2s; }
+.why-feat:hover { border-color:#1A6BFF; background:#EEF5FF; }
+.why-feat-icon { width:38px; height:38px; border-radius:10px; background:#E8F0FF; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+.why-feat-title { font-size:0.92rem; font-weight:700; color:#0B1120; margin-bottom:3px; }
+.why-feat-desc { font-size:0.82rem; color:#6B7A99; line-height:1.5; }
 
-/* QUI */
-.who { background:#080e1c; }
-.who-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:32px; }
-.who-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:24px 20px; text-align:center; transition:all 0.25s; }
-.who-card:hover { background:rgba(26,107,255,0.1); border-color:rgba(26,107,255,0.35); transform:translateY(-3px); }
-.who-emoji { font-size:2.2rem; margin-bottom:12px; }
-.who-name { font-size:0.95rem; font-weight:800; color:#ffffff; margin-bottom:4px; }
-.who-ex { font-size:0.78rem; color:rgba(255,255,255,0.4); font-weight:500; }
-.elig { background:rgba(255,216,77,0.06); border:1px solid rgba(255,216,77,0.2); border-radius:16px; padding:28px 36px; display:flex; align-items:center; justify-content:space-around; flex-wrap:wrap; gap:20px; }
+/* PHOTO SECTION */
+.why-photo { position:relative; border-radius:20px; overflow:hidden; height:480px; }
+.why-photo img { width:100%; height:100%; object-fit:cover; }
+.why-photo-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent, rgba(11,17,32,0.9)); padding:28px; }
+.wv-no { font-size:3.5rem; font-weight:900; color:#EF4444; line-height:1; margin-bottom:6px; }
+.wv-bank { font-size:0.85rem; color:rgba(255,255,255,0.6); font-style:italic; margin-bottom:20px; }
+.wv-divider { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.wv-line { flex:1; height:1px; background:rgba(255,255,255,0.2); }
+.wv-vs { font-size:0.65rem; font-weight:800; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:3px; }
+.wv-yes { font-size:2.2rem; font-weight:900; color:#2EC4A0; line-height:1; margin-bottom:6px; }
+.wv-ft { font-size:0.85rem; color:rgba(255,255,255,0.8); line-height:1.6; }
+.wv-ft strong { color:#FFD84D; }
+
+/* QUI — GRIS CLAIR */
+.who { background:#F8FAFF; }
+.who-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:28px; }
+.who-card { background:#ffffff; border:1.5px solid #E5E7EB; border-radius:16px; padding:24px 18px; text-align:center; transition:all 0.22s; }
+.who-card:hover { border-color:#1A6BFF; transform:translateY(-3px); box-shadow:0 8px 24px rgba(26,107,255,0.1); }
+.who-emoji { font-size:2rem; margin-bottom:10px; }
+.who-name { font-size:0.92rem; font-weight:800; color:#0B1120; margin-bottom:3px; }
+.who-ex { font-size:0.76rem; color:#6B7A99; }
+.elig { background:#0B1120; border-radius:16px; padding:26px 32px; display:flex; align-items:center; justify-content:space-around; flex-wrap:wrap; gap:18px; }
 .elig-item { text-align:center; }
-.elig-val { font-size:1.6rem; font-weight:900; color:#FFD84D; letter-spacing:-0.5px; }
-.elig-label { font-size:0.78rem; color:rgba(255,255,255,0.5); margin-top:4px; font-weight:500; }
-.elig-sep { width:1px; height:48px; background:rgba(255,255,255,0.1); }
+.elig-val { font-size:1.5rem; font-weight:900; color:#FFD84D; }
+.elig-label { font-size:0.75rem; color:rgba(255,255,255,0.55); margin-top:3px; }
+.elig-sep { width:1px; height:44px; background:rgba(255,255,255,0.12); }
 
-/* HOW */
-.how { background:#0B1120; }
+/* COMMENT — BLANC */
+.how { background:#ffffff; }
 .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-.step { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:28px 22px; transition:all 0.25s; }
-.step:hover { background:rgba(26,107,255,0.08); border-color:rgba(26,107,255,0.25); transform:translateY(-3px); }
-.step-n { width:44px; height:44px; border-radius:12px; background:rgba(26,107,255,0.2); border:1px solid rgba(26,107,255,0.3); color:#1A6BFF; font-size:1rem; font-weight:900; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
-.step h3 { font-size:1rem; font-weight:800; color:#ffffff; margin-bottom:8px; }
-.step p { font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.6; font-weight:500; }
-.step-time { display:inline-block; margin-top:12px; font-size:0.72rem; font-weight:700; color:#2EC4A0; }
+.step { background:#F8FAFF; border-radius:16px; padding:26px 20px; border:1px solid #E8F0FF; transition:all 0.22s; }
+.step:hover { box-shadow:0 8px 24px rgba(26,107,255,0.1); border-color:#1A6BFF; transform:translateY(-3px); }
+.step-n { width:42px; height:42px; border-radius:11px; background:#1A6BFF; color:#ffffff; font-size:0.95rem; font-weight:900; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.step h3 { font-size:0.95rem; font-weight:800; color:#0B1120; margin-bottom:7px; }
+.step p { font-size:0.82rem; color:#6B7A99; line-height:1.6; }
+.step-time { display:inline-block; margin-top:10px; font-size:0.7rem; font-weight:700; color:#2EC4A0; background:#E6FAF6; padding:3px 10px; border-radius:20px; }
 
-/* USES */
-.uses { background:#080e1c; }
+/* PHOTOS SECTEURS — GRIS CLAIR */
+.sectors { background:#F8FAFF; }
+.sectors-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.sector-card { border-radius:18px; overflow:hidden; position:relative; height:220px; }
+.sector-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+.sector-card:hover img { transform:scale(1.05); }
+.sector-overlay { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(11,17,32,0.85)); padding:20px 18px; }
+.sector-name { font-size:1rem; font-weight:800; color:#ffffff; margin-bottom:2px; }
+.sector-sub { font-size:0.75rem; color:rgba(255,255,255,0.65); }
+
+/* CAS D'USAGE — BLANC */
+.uses { background:#ffffff; }
 .uses-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.use-card { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px 22px; transition:all 0.25s; }
-.use-card:hover { background:rgba(26,107,255,0.08); border-color:rgba(26,107,255,0.25); }
-.use-icon { font-size:2rem; margin-bottom:14px; }
-.use-card h3 { font-size:1rem; font-weight:800; color:#ffffff; margin-bottom:8px; }
-.use-card p { font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.65; font-weight:500; }
+.use-card { background:#F8FAFF; border:1px solid #E8F0FF; border-radius:16px; padding:26px 20px; transition:all 0.22s; }
+.use-card:hover { background:#EEF5FF; border-color:#1A6BFF; }
+.use-icon { font-size:1.9rem; margin-bottom:12px; }
+.use-card h3 { font-size:0.95rem; font-weight:800; color:#0B1120; margin-bottom:7px; }
+.use-card p { font-size:0.85rem; color:#6B7A99; line-height:1.65; }
 
-/* REAS */
-.reas { background:#0B1120; }
-.reas-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.reas-card { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:30px; display:flex; gap:20px; align-items:flex-start; transition:all 0.25s; }
-.reas-card:hover { background:rgba(26,107,255,0.07); border-color:rgba(26,107,255,0.2); }
-.reas-icon { width:52px; height:52px; border-radius:14px; background:rgba(26,107,255,0.15); display:flex; align-items:center; justify-content:center; font-size:1.5rem; flex-shrink:0; }
-.reas-card h3 { font-size:1rem; font-weight:800; color:#ffffff; margin-bottom:8px; }
-.reas-card p { font-size:0.88rem; color:rgba(255,255,255,0.55); line-height:1.65; font-weight:500; }
+/* RÉASSURANCE — GRIS CLAIR */
+.reas { background:#F8FAFF; }
+.reas-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.reas-card { background:#ffffff; border:1px solid #E5E7EB; border-radius:18px; padding:28px; display:flex; gap:18px; align-items:flex-start; transition:all 0.22s; }
+.reas-card:hover { border-color:#1A6BFF; box-shadow:0 6px 20px rgba(26,107,255,0.08); }
+.reas-icon { width:50px; height:50px; border-radius:13px; background:#E8F0FF; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
+.reas-card h3 { font-size:0.95rem; font-weight:800; color:#0B1120; margin-bottom:7px; }
+.reas-card p { font-size:0.85rem; color:#6B7A99; line-height:1.65; }
 
-/* FAQ */
-.faq { background:#080e1c; }
+/* CHIFFRES CLÉS */
+.numbers { background:#0B1120; }
+.numbers-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.number-card { text-align:center; padding:32px 20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:18px; }
+.number-val { font-size:2.8rem; font-weight:900; color:#FFD84D; letter-spacing:-1px; line-height:1; margin-bottom:8px; }
+.number-label { font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.5; font-weight:500; }
+
+/* FAQ — BLANC */
+.faq { background:#ffffff; }
 .faq-list { max-width:740px; display:flex; flex-direction:column; gap:10px; }
-.faq-item { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden; transition:border-color 0.2s; }
-.faq-item.open { border-color:rgba(26,107,255,0.4); background:rgba(26,107,255,0.05); }
-.faq-q { padding:20px 24px; font-size:1rem; font-weight:700; color:#ffffff; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; user-select:none; }
-.faq-chevron { width:26px; height:26px; border-radius:50%; background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.5); font-size:0.9rem; flex-shrink:0; transition:transform 0.25s,background 0.25s; }
+.faq-item { background:#F8FAFF; border:1px solid #E5E7EB; border-radius:14px; overflow:hidden; transition:border-color 0.2s; }
+.faq-item.open { border-color:#1A6BFF; background:#EEF5FF; }
+.faq-q { padding:20px 22px; font-size:0.97rem; font-weight:700; color:#0B1120; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px; user-select:none; }
+.faq-chevron { width:26px; height:26px; border-radius:50%; background:#E8F0FF; display:flex; align-items:center; justify-content:center; color:#1A6BFF; font-size:0.85rem; flex-shrink:0; transition:transform 0.25s,background 0.25s; }
 .faq-item.open .faq-chevron { transform:rotate(180deg); background:#1A6BFF; color:#ffffff; }
-.faq-a { max-height:0; overflow:hidden; transition:max-height 0.3s ease,padding 0.3s; font-size:0.95rem; color:rgba(255,255,255,0.6); line-height:1.75; padding:0 24px; font-weight:500; }
-.faq-item.open .faq-a { max-height:200px; padding-bottom:22px; }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease,padding 0.3s; font-size:0.92rem; color:#374151; line-height:1.75; padding:0 22px; font-weight:500; }
+.faq-item.open .faq-a { max-height:300px; padding-bottom:20px; }
 
-/* CTA FINAL */
-.cta-final { background:linear-gradient(135deg,#0d1a3a 0%,#0B1120 100%); border-top:1px solid rgba(255,255,255,0.07); text-align:center; }
-.cta-box { max-width:640px; margin:0 auto; }
-.cta-box h2 { margin-bottom:16px; }
-.cta-box p { color:rgba(255,255,255,0.55); font-size:1.05rem; line-height:1.75; margin-bottom:40px; font-weight:500; }
+/* CTA FINAL — SOMBRE */
+.cta-final { background:linear-gradient(135deg,#0d1a3a,#0B1120); text-align:center; position:relative; overflow:hidden; }
+.cta-final::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=60') center/cover; opacity:0.06; }
+.cta-box { max-width:620px; margin:0 auto; position:relative; z-index:1; }
+.cta-box .section-tag { color:#2EC4A0; }
+.cta-box h2 { color:#ffffff; margin-bottom:14px; }
+.cta-box p { color:rgba(255,255,255,0.55); font-size:1rem; line-height:1.75; margin-bottom:36px; }
 .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-.cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.25); font-weight:500; }
+.cta-note { margin-top:18px; font-size:0.78rem; color:rgba(255,255,255,0.25); }
 
-/* FOOTER */
-footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); padding:48px 0 32px; }
-.footer-inner { display:flex; justify-content:space-between; align-items:flex-start; gap:32px; flex-wrap:wrap; margin-bottom:40px; }
-.footer-logo-name { font-size:1.3rem; font-weight:900; color:#ffffff; margin-bottom:12px; }
+/* FOOTER — SOMBRE */
+footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); padding:44px 0 28px; }
+.footer-inner { display:flex; justify-content:space-between; align-items:flex-start; gap:28px; flex-wrap:wrap; margin-bottom:36px; }
+.footer-logo-name { font-size:1.2rem; font-weight:900; color:#ffffff; margin-bottom:10px; }
 .footer-logo-name span { color:#FFD84D; }
-.footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.35); line-height:1.7; max-width:340px; font-weight:500; }
-.footer-links { display:flex; gap:24px; }
-.footer-links a { font-size:0.85rem; color:rgba(255,255,255,0.4); text-decoration:none; font-weight:500; }
+.footer-desc { font-size:0.8rem; color:rgba(255,255,255,0.35); line-height:1.65; max-width:340px; }
+.footer-links { display:flex; gap:22px; }
+.footer-links a { font-size:0.82rem; color:rgba(255,255,255,0.4); text-decoration:none; }
 .footer-links a:hover { color:rgba(255,255,255,0.8); }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:24px; font-size:0.78rem; color:rgba(255,255,255,0.2); text-align:center; line-height:1.6; font-weight:500; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:20px; font-size:0.75rem; color:rgba(255,255,255,0.2); text-align:center; line-height:1.6; }
 
 /* RESPONSIVE */
 @media(max-width:960px) {
@@ -174,16 +192,20 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
   .steps { grid-template-columns:1fr 1fr; }
   .uses-grid { grid-template-columns:1fr 1fr; }
   .reas-grid { grid-template-columns:1fr; }
+  .numbers-grid { grid-template-columns:1fr 1fr; }
+  .sectors-grid { grid-template-columns:1fr 1fr; }
   .nav-links { display:none; }
 }
 @media(max-width:600px) {
   .who-grid { grid-template-columns:1fr 1fr; }
   .steps { grid-template-columns:1fr; }
   .uses-grid { grid-template-columns:1fr; }
-  .stat { padding:8px 20px; }
+  .sectors-grid { grid-template-columns:1fr; }
+  .stat { padding:8px 18px; }
   .elig-sep { display:none; }
-  .hero { padding:120px 0 70px; }
-  .container { padding:0 20px; }
+  .hero { padding:120px 0 64px; }
+  .container { padding:0 18px; }
+  .numbers-grid { grid-template-columns:1fr 1fr; }
 }
 </style>
 </head>
@@ -208,6 +230,7 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
   </div>
 </nav>
 
+<!-- HERO SOMBRE -->
 <section class="hero">
   <div class="container hero-inner">
     <div>
@@ -216,19 +239,14 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
       <p class="hero-sub">FlashTréso met en relation les commerçants avec des partenaires financiers qui analysent vos <strong>encaissements réels</strong> — pas votre bilan, pas vos garanties. De 2 000 à 100 000 € directement sur votre compte pro.</p>
       <div class="hero-btns">
         <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary">Vérifier mon éligibilité gratuitement →</a>
-        <a href="#comment" class="btn-secondary">Comment ça marche</a>
+        <a href="#comment" class="btn-outline">Comment ça marche</a>
       </div>
       <p class="hero-trust">🔒 2 minutes · Gratuit · Sans engagement · Jean-Yves ou un membre de son équipe vous rappelle sous 24h</p>
     </div>
     <div class="hero-card">
-      <div class="hc-top">
-        <div>
-          <div class="hc-label">Exemple d'avance</div>
-          <div class="hc-amount">45 000 €</div>
-          <div class="hc-sub">versés sur votre compte pro</div>
-        </div>
-        <div class="hc-badge">✓ Éligible</div>
-      </div>
+      <div class="hc-label">Exemple d'avance</div>
+      <div class="hc-amount">45 000 €</div>
+      <div class="hc-sub">versés sur votre compte pro</div>
       <div class="hc-divider"></div>
       <div class="hc-feats">
         <div class="hc-feat"><div class="hc-feat-icon">⚡</div>Réponse sous 24–48 heures</div>
@@ -241,6 +259,7 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
   </div>
 </section>
 
+<!-- STATS BLEU -->
 <div class="stats">
   <div class="container stats-inner">
     <div class="stat"><div class="stat-n">24–48h</div><div class="stat-l">Délai de réponse</div></div>
@@ -250,6 +269,7 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
   </div>
 </div>
 
+<!-- POURQUOI — BLANC avec photo -->
 <section class="why">
   <div class="container why-grid">
     <div class="why-text">
@@ -260,20 +280,23 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
       <div class="why-features">
         <div class="why-feat"><div class="why-feat-icon">😤</div><div><div class="why-feat-title">Découvert réduit sans prévenir</div><div class="why-feat-desc">Votre banque modifie vos conditions sans dialogue.</div></div></div>
         <div class="why-feat"><div class="why-feat-icon">⏳</div><div><div class="why-feat-title">3 à 6 semaines d'attente</div><div class="why-feat-desc">Pour finalement recevoir un refus ou des conditions inacceptables.</div></div></div>
-        <div class="why-feat"><div class="why-feat-icon">🏠</div><div><div class="why-feat-title">Caution personnelle exigée</div><div class="why-feat-desc">Votre patrimoine personnel mis en jeu pour votre activité professionnelle.</div></div></div>
+        <div class="why-feat"><div class="why-feat-icon">🏠</div><div><div class="why-feat-title">Caution personnelle exigée</div><div class="why-feat-desc">Votre patrimoine personnel mis en jeu pour votre activité.</div></div></div>
       </div>
     </div>
-    <div class="why-visual">
-      <div class="wv-label">La banque traditionnelle</div>
-      <div class="wv-no">NON.</div>
-      <div class="wv-bank">"Votre bilan ne correspond pas à nos critères. Nous ne pouvons pas donner suite à votre demande."</div>
-      <div class="wv-divider"><div class="wv-line"></div><div class="wv-vs">vs</div><div class="wv-line"></div></div>
-      <div class="wv-yes">OUI.</div>
-      <div class="wv-ft">FlashTréso analyse vos encaissements réels. Pas votre bilan. Pas vos garanties.<br><strong>Réponse en 24–48h. Remboursement fixé d'avance.</strong></div>
+    <div class="why-photo">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Restaurant commerce">
+      <div class="why-photo-overlay">
+        <div class="wv-no">NON.</div>
+        <div class="wv-bank">"Votre bilan ne correspond pas à nos critères."</div>
+        <div class="wv-divider"><div class="wv-line"></div><div class="wv-vs">vs</div><div class="wv-line"></div></div>
+        <div class="wv-yes">OUI.</div>
+        <div class="wv-ft">FlashTréso analyse vos encaissements réels.<br><strong>Réponse en 24–48h. Remboursement fixé d'avance.</strong></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- QUI — GRIS CLAIR -->
 <section class="who" id="qui">
   <div class="container">
     <span class="section-tag">Éligibilité</span>
@@ -299,85 +322,164 @@ footer { background:#060c18; border-top:1px solid rgba(255,255,255,0.06); paddin
   </div>
 </section>
 
+<!-- PHOTOS SECTEURS -->
+<section class="sectors">
+  <div class="container">
+    <span class="section-tag">Nos secteurs</span>
+    <h2>Des solutions pour chaque commerce.</h2>
+    <p class="section-lead">Quel que soit votre secteur, FlashTréso a une solution adaptée à votre activité.</p>
+    <div class="sectors-grid">
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=600&q=80" alt="Restaurant">
+        <div class="sector-overlay"><div class="sector-name">🍽️ Restaurant & Bar</div><div class="sector-sub">Trésorerie cyclique, stocks fréquents</div></div>
+      </div>
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80" alt="Salon coiffure">
+        <div class="sector-overlay"><div class="sector-name">✂️ Coiffure & Beauté</div><div class="sector-sub">Équipement, recrutement, développement</div></div>
+      </div>
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Commerce">
+        <div class="sector-overlay"><div class="sector-name">🛍️ Commerce de détail</div><div class="sector-sub">Stock saisonnier, opportunités d'achat</div></div>
+      </div>
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=600&q=80" alt="Boulangerie">
+        <div class="sector-overlay"><div class="sector-name">🥖 Commerce alimentaire</div><div class="sector-sub">Boulangerie, épicerie, boucherie</div></div>
+      </div>
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Sport">
+        <div class="sector-overlay"><div class="sector-name">🏋️ Sport & Bien-être</div><div class="sector-sub">Salle de sport, spa, esthétique</div></div>
+      </div>
+      <div class="sector-card">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="Auto">
+        <div class="sector-overlay"><div class="sector-name">🚗 Services & Auto</div><div class="sector-sub">Garage, pressing, fleuriste</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT — BLANC -->
 <section class="how" id="comment">
   <div class="container">
-    <div style="text-align:center;margin-bottom:56px">
+    <div style="text-align:center;margin-bottom:52px">
       <span class="section-tag">Processus</span>
       <h2>Simple. Rapide. Sans paperasse.</h2>
       <p class="section-lead" style="margin:0 auto">4 étapes. Pas de dossier interminable. Juste votre activité réelle.</p>
     </div>
     <div class="steps">
       <div class="step"><div class="step-n">01</div><h3>Vous vérifiez votre éligibilité</h3><p>Questionnaire en ligne en 2 minutes. Aucun document à ce stade.</p><span class="step-time">⏱ 2 minutes</span></div>
-      <div class="step"><div class="step-n">02</div><h3>Jean-Yves vous rappelle</h3><p>Jean-Yves ou un membre de son équipe vous contacte sous 24h pour qualifier votre besoin et vous connecter au bon partenaire.</p><span class="step-time">⏱ Sous 24h</span></div>
+      <div class="step"><div class="step-n">02</div><h3>Jean-Yves ou son équipe vous rappelle</h3><p>Contact sous 24h pour qualifier votre besoin et vous connecter au bon partenaire.</p><span class="step-time">⏱ Sous 24h</span></div>
       <div class="step"><div class="step-n">03</div><h3>Votre dossier est analysé</h3><p>Le partenaire étudie vos encaissements réels — pas votre bilan ni vos garanties.</p><span class="step-time">⏱ 24–48h</span></div>
       <div class="step"><div class="step-n">04</div><h3>Les fonds arrivent</h3><p>Versement direct sur votre compte pro. Remboursement fixé et connu d'avance.</p><span class="step-time">⏱ Versement rapide</span></div>
     </div>
-    <div style="text-align:center;margin-top:48px">
+    <div style="text-align:center;margin-top:44px">
       <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary">Je vérifie mon éligibilité gratuitement →</a>
     </div>
   </div>
 </section>
 
-<section class="uses">
+<!-- CAS D'USAGE — GRIS CLAIR -->
+<section class="uses" style="background:#F8FAFF">
   <div class="container">
     <span class="section-tag">À quoi ça sert ?</span>
     <h2>Pour les coups durs<br>et les bonnes opportunités.</h2>
     <p class="section-lead">FlashTréso n'est pas réservé aux crises. C'est aussi un outil de croissance.</p>
     <div class="uses-grid">
       <div class="use-card"><div class="use-icon">💧</div><h3>Trou de trésorerie</h3><p>Charges à payer, fournisseurs à régler avant que les encaissements rentrent.</p></div>
-      <div class="use-card"><div class="use-icon">📦</div><h3>Stock urgent</h3><p>Opportunité d'achat, saisonnalité qui approche — agissez vite sans décaler votre tréso.</p></div>
-      <div class="use-card"><div class="use-icon">🚀</div><h3>Opportunité commerciale</h3><p>Nouveau local, recrutement, campagne — financez votre croissance sans dilution.</p></div>
-      <div class="use-card"><div class="use-icon">🧾</div><h3>Grosse facture à avancer</h3><p>Travaux, équipement, prestataire — payez maintenant, remboursez progressivement.</p></div>
-      <div class="use-card"><div class="use-icon">🌿</div><h3>Souffler pendant la croissance</h3><p>Période tendue ? Gardez la tête hors de l'eau sans sacrifier votre développement.</p></div>
-      <div class="use-card"><div class="use-icon">🔄</div><h3>Financement récurrent</h3><p>Renouvelable plusieurs fois dans l'année — une ligne souple adaptée à votre rythme.</p></div>
+      <div class="use-card"><div class="use-icon">📦</div><h3>Stock urgent</h3><p>Opportunité d'achat, saisonnalité qui approche — agissez vite.</p></div>
+      <div class="use-card"><div class="use-icon">🚀</div><h3>Opportunité commerciale</h3><p>Nouveau local, recrutement, campagne — financez votre croissance.</p></div>
+      <div class="use-card"><div class="use-icon">🧾</div><h3>Grosse facture à avancer</h3><p>Travaux, équipement — payez maintenant, remboursez progressivement.</p></div>
+      <div class="use-card"><div class="use-icon">🌿</div><h3>Souffler pendant la croissance</h3><p>Période tendue ? Gardez la tête hors de l'eau.</p></div>
+      <div class="use-card"><div class="use-icon">🔄</div><h3>Financement récurrent</h3><p>Renouvelable plusieurs fois dans l'année — une ligne souple.</p></div>
     </div>
   </div>
 </section>
 
+<!-- CHIFFRES CLÉS — SOMBRE -->
+<section class="numbers">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="section-tag" style="color:#2EC4A0">En chiffres</span>
+      <h2 style="color:#ffffff">Des résultats concrets<br>pour les commerçants.</h2>
+    </div>
+    <div class="numbers-grid">
+      <div class="number-card"><div class="number-val">48h</div><div class="number-label">Délai de réponse maximum après dépôt du dossier</div></div>
+      <div class="number-card"><div class="number-val">100K€</div><div class="number-label">Montant maximum disponible en une seule avance</div></div>
+      <div class="number-card"><div class="number-val">0€</div><div class="number-label">Frais de mise en relation pour le commerçant</div></div>
+      <div class="number-card"><div class="number-val">×3</div><div class="number-label">Renouvellements possibles dans la même année</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉASSURANCE — GRIS CLAIR -->
 <section class="reas">
   <div class="container">
     <span class="section-tag">Pourquoi FlashTréso</span>
     <h2>Ce qui nous rend différents.</h2>
     <div class="reas-grid">
       <div class="reas-card"><div class="reas-icon">🏦</div><div><h3>Pas une banque — mieux qu'une banque</h3><p>Nous ne gérons aucun fonds. Notre seul rôle : vous connecter au bon partenaire financier, vite.</p></div></div>
-      <div class="reas-card"><div class="reas-icon">💸</div><div><h3>Gratuit pour vous, toujours</h3><p>Mise en relation 100% gratuite. Nous sommes rémunérés par nos partenaires uniquement en cas de financement accordé.</p></div></div>
-      <div class="reas-card"><div class="reas-icon">🤝</div><div><h3>Un interlocuteur humain</h3><p>Jean-Yves ou un membre de son équipe vous rappelle personnellement. Une vraie conversation avec un expert, pas un formulaire sans suite.</p></div></div>
+      <div class="reas-card"><div class="reas-icon">💸</div><div><h3>Gratuit pour vous, toujours</h3><p>Mise en relation 100% gratuite. Rémunérés par nos partenaires uniquement en cas de financement accordé.</p></div></div>
+      <div class="reas-card"><div class="reas-icon">🤝</div><div><h3>Un interlocuteur humain</h3><p>Jean-Yves ou un membre de son équipe vous rappelle personnellement. Une vraie conversation, pas un formulaire.</p></div></div>
       <div class="reas-card"><div class="reas-icon">🔒</div><div><h3>Zéro engagement avant accord</h3><p>Vous vérifiez votre éligibilité sans engagement. La mise en relation n'a lieu que si vous validez.</p></div></div>
     </div>
   </div>
 </section>
 
+<!-- FAQ — BLANC -->
 <section class="faq" id="faq">
   <div class="container">
     <span class="section-tag">Questions fréquentes</span>
     <h2>Ce que vous voulez savoir<br>avant de démarrer.</h2>
     <br><br>
     <div class="faq-list">
-      <div class="faq-item"><div class="faq-q">La mise en relation FlashTréso est-elle vraiment gratuite ?<span class="faq-chevron">▾</span></div><div class="faq-a">Oui, entièrement. FlashTréso est rémunéré par ses partenaires financiers uniquement en cas de financement accordé. Vous ne payez rien à aucune étape.</div></div>
-      <div class="faq-item"><div class="faq-q">Ai-je besoin de fournir une garantie ou une caution personnelle ?<span class="faq-chevron">▾</span></div><div class="faq-a">Non. Le financement repose sur vos encaissements réels — pas sur vos actifs personnels, votre immobilier ou votre bilan comptable.</div></div>
-      <div class="faq-item"><div class="faq-q">Quel est le coût réel du financement ?<span class="faq-chevron">▾</span></div><div class="faq-a">Le partenaire applique un facteur sur le montant avancé — généralement entre 1,45 et 1,55 selon votre profil. Ce coût est présenté clairement dès le premier échange. Aucune surprise.</div></div>
-      <div class="faq-item"><div class="faq-q">Le remboursement est-il vraiment fixé d'avance ?<span class="faq-chevron">▾</span></div><div class="faq-a">Oui. Le montant et le calendrier de remboursement sont fixés et connus avant la signature. Vous pouvez vous planifier sereinement — pas de surprise en cours de route.</div></div>
-      <div class="faq-item"><div class="faq-q">Mon activité est saisonnière — est-ce un problème ?<span class="faq-chevron">▾</span></div><div class="faq-a">Non. Le remboursement s'adapte à vos encaissements hebdomadaires : vous remboursez plus en haute saison, moins en période creuse.</div></div>
-      <div class="faq-item"><div class="faq-q">FlashTréso est-il une banque ou un organisme de crédit ?<span class="faq-chevron">▾</span></div><div class="faq-a">Non. FlashTréso est un apporteur d'affaires indépendant opéré par JY Capital Consulting Ltd. Nous ne gérons aucun fonds et ne délivrons aucun conseil financier réglementé.</div></div>
+      <div class="faq-item">
+        <div class="faq-q">La mise en relation FlashTréso est-elle vraiment gratuite ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Oui, entièrement gratuite pour vous. FlashTréso est rémunéré par ses partenaires financiers uniquement en cas de financement accordé. Vous ne payez rien à aucune étape du processus.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ai-je besoin de fournir une garantie ou une caution personnelle ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Non. C'est précisément l'avantage de ce modèle. Le financement repose uniquement sur vos encaissements réels — pas sur vos actifs personnels, votre immobilier ou votre bilan comptable. Votre patrimoine personnel n'est pas engagé.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quel est le coût réel du financement ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Le partenaire applique un facteur sur le montant avancé — généralement entre 1,45 et 1,55 selon votre profil et le montant. Ce coût est présenté clairement et en toute transparence dès le premier échange avec Jean-Yves ou son équipe. Aucune surprise.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le remboursement est-il vraiment fixé d'avance ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Oui. Le montant total à rembourser et le calendrier de remboursement sont fixés et connus avant la signature. Vous pouvez planifier votre trésorerie sereinement — il n'y a aucune surprise en cours de route.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Mon activité est saisonnière — est-ce un problème ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Non, au contraire. Le remboursement est indexé sur vos encaissements hebdomadaires : vous remboursez davantage en haute saison et moins en période creuse. C'est un modèle conçu pour la réalité des commerces saisonniers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Combien de temps faut-il pour obtenir les fonds ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Jean-Yves ou un membre de son équipe vous rappelle sous 24h après votre demande. Une fois le dossier transmis au partenaire, la réponse arrive généralement en 24 à 48 heures. Les fonds sont ensuite versés directement sur votre compte professionnel.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">FlashTréso est-il une banque ou un organisme de crédit ?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Non. FlashTréso est un apporteur d'affaires indépendant opéré par JY Capital Consulting Ltd. Nous ne gérons aucun fonds et ne délivrons aucun conseil financier réglementé. Notre rôle est exclusivement de vous mettre en relation avec des partenaires financiers vérifiés.</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- CTA FINAL — SOMBRE -->
 <section class="cta-final">
   <div class="container">
     <div class="cta-box">
-      <span class="section-tag" style="display:block;margin-bottom:14px">Prêt à démarrer ?</span>
+      <span class="section-tag" style="display:block;margin-bottom:12px">Prêt à démarrer ?</span>
       <h2>Vérifiez votre éligibilité<br>en 2 minutes.</h2>
       <p>Questionnaire simple, aucun document requis, aucun engagement.<br>Jean-Yves ou un membre de son équipe vous rappelle personnellement sous 24h.</p>
       <div class="cta-btns">
-        <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Je vérifie gratuitement →</a>
-        <a href="tel:+33XXXXXXXXX" class="btn-secondary">📞 Nous appeler</a>
+        <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary" style="font-size:1.05rem;padding:17px 38px">Je vérifie gratuitement →</a>
+        <a href="tel:+33XXXXXXXXX" class="btn-outline">📞 Nous appeler</a>
       </div>
-      <div class="cta-note">🔒 Mise en relation gratuite · Sans garantie · Sans engagement · France prioritaire</div>
+      <div class="cta-note">🔒 Mise en relation gratuite · Sans garantie · Sans engagement · France entière</div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER SOMBRE -->
 <footer>
   <div class="container">
     <div class="footer-inner">
