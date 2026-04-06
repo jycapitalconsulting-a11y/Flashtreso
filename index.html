@@ -242,7 +242,7 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
     <div data-reveal>
       <div class="hero-badge"><div class="dot"></div>Le coup de pouce que votre banque ne vous donne pas</div>
       <h1>Votre banque vous a dit non.<br><em>Nous vous disons oui.</em></h1>
-      <p class="hero-sub">FlashTr&#233;so d&#233;fend votre dossier aupr&#232;s de partenaires financiers sp&#233;cialis&#233;s. Ce sont eux qui financent &#8212; nous pr&#233;sentons votre activit&#233; r&#233;elle sous son meilleur jour. <strong>De 2&#8202;000 &#224; 100&#8202;000&#8202;&#8364;</strong> directement sur votre compte pro.</p>
+      <p class="hero-sub">FlashTr&#233;so d&#233;fend votre dossier aupr&#232;s de partenaires financiers sp&#233;cialis&#233;s. Ce sont eux qui financent &#8212; nous pr&#233;sentons votre activit&#233; r&#233;elle sous son meilleur jour.<br><span style="color:#ffffff;font-weight:600;display:inline-block;margin-top:10px">De 2&#160;000 &#224; 100&#160;000&#160;&#8364; directement sur votre compte pro.</span></p>
       <div class="hero-btns">
         <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary">V&#233;rifier mon &#233;ligibilit&#233; gratuitement &#8594;</a>
         <a href="#comment" class="btn-outline">Comment &#231;a marche</a>
@@ -606,7 +606,7 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
       <p>Questionnaire simple, sans engagement. Jean-Yves ou son &#233;quipe vous rappelle sous 24h pour d&#233;fendre votre dossier aupr&#232;s de nos partenaires financiers.</p>
       <div class="cta-btns">
         <a href="https://form.typeform.com/to/AOjwzGiI" class="btn-primary" style="font-size:1.05rem;padding:17px 38px">Je v&#233;rifie gratuitement &#8594;</a>
-        <a href="mailto:contact@flashtreso.com" class="btn-outline-w">Nous contacter</a>
+        <a href="/cdn-cgi/l/email-protection#fd9e9293899c9e89bd9b919c8e95898f988e92d39e9290" class="btn-outline-w">Nous contacter</a>
       </div>
       <div class="cta-note">&#128274; Mise en relation gratuite &#183; Sans garantie &#183; Sans engagement &#183; France enti&#232;re</div>
     </div>
@@ -640,7 +640,7 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
           <li><a href="#">Mentions l&#233;gales</a></li>
           <li><a href="#">Politique de confidentialit&#233;</a></li>
           <li><a href="#">RGPD</a></li>
-          <li><a href="mailto:contact@flashtreso.com">Contact</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#e3808c8d97828097a3858f82908b979186908ccd808c8e">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -651,7 +651,7 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
   </div>
 </footer>
  
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var obs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
@@ -745,11 +745,4 @@ function calculer() {
   document.getElementById('r-taux').textContent = cfg.label;
 }
  
-document.getElementById('calc-submit').addEventListener('click', calculer);
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && document.activeElement.closest('.calc-wrap')) calculer();
-});
-</script>
-</body>
-</html>
- 
+document.getElementById('calc-submit').addEv
