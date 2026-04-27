@@ -275,6 +275,104 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
   </div>
 </div>
  
+<section class="calc-section" id="simulateur" data-reveal>
+  <div class="container">
+    <span class="section-tag">Simulateur</span>
+    <h2>Estimez votre avance<br>en 30 secondes.</h2>
+    <p class="section-lead">Renseignez 3 informations sur votre activit&#233; &#8212; nous calculons une fourchette indicative bas&#233;e sur vos encaissements r&#233;els.</p>
+    <div class="calc-wrap">
+      <div>
+        <div class="calc-field">
+          <label class="calc-label" for="c-ca">Ventes moyennes mensuelles encaiss&#233;es <em>(visible sur relev&#233; de compte)</em></label>
+          <input type="number" id="c-ca" class="calc-input" placeholder="Ex : 45000" min="0" step="500">
+          <div class="calc-err-msg" id="e-ca"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-label" for="c-age">Anciennet&#233; de l&#8217;entreprise <em>(en mois)</em></label>
+          <input type="number" id="c-age" class="calc-input" placeholder="Ex : 18" min="0" step="1">
+          <div class="calc-err-msg" id="e-age"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-label" for="c-sector">Secteur d&#8217;activit&#233;</label>
+          <div class="calc-select-wrap">
+            <select id="c-sector" class="calc-select">
+              <option value="" disabled selected>Choisissez votre secteur</option>
+              <optgroup label="Consulting">
+                <option value="consulting">Conseil en management</option>
+                <option value="consulting">Conseil en strat&#233;gie</option>
+                <option value="consulting">Conseil informatique / IT</option>
+                <option value="consulting">D&#233;veloppement logiciel</option>
+                <option value="consulting">Agence digitale</option>
+                <option value="consulting">Marketing / communication</option>
+                <option value="consulting">Publicit&#233;</option>
+                <option value="consulting">Ressources humaines / recrutement</option>
+                <option value="consulting">Cabinet comptable</option>
+                <option value="consulting">Cabinet juridique</option>
+                <option value="consulting">Bureau d&#8217;&#233;tudes / ing&#233;nierie</option>
+                <option value="consulting">Formation professionnelle</option>
+              </optgroup>
+              <optgroup label="Commerce / H&#244;tel / Restaurant / Retail">
+                <option value="commerce">Commerce de d&#233;tail</option>
+                <option value="commerce">Boutique en ligne / e-commerce</option>
+                <option value="commerce">Supermarch&#233; / alimentation</option>
+                <option value="commerce">Magasin de v&#234;tements</option>
+                <option value="commerce">Magasin de meubles / d&#233;coration</option>
+                <option value="commerce">H&#244;tel</option>
+                <option value="commerce">H&#233;bergement touristique</option>
+                <option value="commerce">Restaurant traditionnel</option>
+                <option value="commerce">Restauration rapide</option>
+                <option value="commerce">Caf&#233; / bar</option>
+                <option value="commerce">Traiteur</option>
+                <option value="commerce">Commerce de gros</option>
+              </optgroup>
+              <optgroup label="Autres B2C">
+                <option value="b2c">Salon de coiffure</option>
+                <option value="b2c">Institut de beaut&#233;</option>
+                <option value="b2c">Salle de sport / fitness</option>
+                <option value="b2c">Agence immobili&#232;re</option>
+                <option value="b2c">Services &#224; domicile</option>
+                <option value="b2c">Cr&#232;che / garde d&#8217;enfants</option>
+                <option value="b2c">Cabinet m&#233;dical</option>
+                <option value="b2c">Cabinet dentaire</option>
+                <option value="b2c">Activit&#233;s de loisirs</option>
+                <option value="b2c">Agence de voyage</option>
+                <option value="b2c">Enseignement / cours particuliers</option>
+                <option value="b2c">Services personnels divers</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="calc-err-msg" id="e-sector"></div>
+        </div>
+        <button class="calc-btn" id="calc-submit">Calculer mon estimation &#8594;</button>
+        <p class="calc-note">Estimation indicative &#183; R&#233;sultat non contractuel &#183; Gratuit et sans engagement</p>
+      </div>
+      <div class="calc-panel" id="calc-panel">
+        <div class="calc-placeholder" id="calc-placeholder">
+          <div class="calc-placeholder-icon">&#128161;</div>
+          <p>Renseignez vos informations pour obtenir une estimation de votre avance de tr&#233;sorerie.</p>
+        </div>
+        <div class="calc-result" id="calc-result">
+          <div class="calc-result-tag">Estimation indicative</div>
+          <div class="calc-result-label">Fourchette d&#8217;avance disponible</div>
+          <div class="calc-range" id="r-range">&#8212;</div>
+          <div class="calc-range-sub">vers&#233;s directement sur votre compte pro</div>
+          <div class="calc-details">
+            <div class="calc-detail"><span>CA mensuel d&#233;clar&#233;</span><span id="r-ca">&#8212;</span></div>
+            <div class="calc-detail"><span>Base analys&#233;e (70%)</span><span id="r-base">&#8212;</span></div>
+            <div class="calc-detail"><span>Mise &#224; disposition par rapport &#224; votre CA</span><span id="r-taux">&#8212;</span></div>
+          </div>
+          <a href="https://form.typeform.com/to/AOjwzGiI" class="calc-result-cta">D&#233;poser ma demande gratuite &#8594;</a>
+        </div>
+        <div class="calc-error-box" id="calc-error">
+          <div class="calc-error-icon">&#9888;&#65039;</div>
+          <div class="calc-error-title" id="e-title">Crit&#232;res non remplis</div>
+          <div class="calc-error-text" id="e-text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <section class="diff">
   <div class="container diff-grid" data-reveal>
     <div class="diff-text">
@@ -446,104 +544,6 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
         <div class="review-speed">&#9889; Fonds re&#231;us en 48h</div>
         <div class="review-text">&#171; Ouverture d&#8217;une deuxi&#232;me salle, j&#8217;avais besoin de 50&#8202;000&#8202;&#8364; rapidement. FlashTr&#233;so a d&#233;fendu mon dossier en mettant en avant mon chiffre d&#8217;affaires r&#233;el. 48h apr&#232;s notre appel, les fonds &#233;taient l&#224;. &#187;</div>
         <div class="review-author"><div class="review-avatar">KD</div><div><div class="review-name">Karim D.</div><div class="review-job">Restaurateur &#8212; Boulogne-Billancourt</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<section class="calc-section" id="simulateur" data-reveal>
-  <div class="container">
-    <span class="section-tag">Simulateur</span>
-    <h2>Estimez votre avance<br>en 30 secondes.</h2>
-    <p class="section-lead">Renseignez 3 informations sur votre activit&#233; &#8212; nous calculons une fourchette indicative bas&#233;e sur vos encaissements r&#233;els.</p>
-    <div class="calc-wrap">
-      <div>
-        <div class="calc-field">
-          <label class="calc-label" for="c-ca">Ventes moyennes mensuelles encaiss&#233;es <em>(visible sur relev&#233; de compte)</em></label>
-          <input type="number" id="c-ca" class="calc-input" placeholder="Ex : 45000" min="0" step="500">
-          <div class="calc-err-msg" id="e-ca"></div>
-        </div>
-        <div class="calc-field">
-          <label class="calc-label" for="c-age">Anciennet&#233; de l&#8217;entreprise <em>(en mois)</em></label>
-          <input type="number" id="c-age" class="calc-input" placeholder="Ex : 18" min="0" step="1">
-          <div class="calc-err-msg" id="e-age"></div>
-        </div>
-        <div class="calc-field">
-          <label class="calc-label" for="c-sector">Secteur d&#8217;activit&#233;</label>
-          <div class="calc-select-wrap">
-            <select id="c-sector" class="calc-select">
-              <option value="" disabled selected>Choisissez votre secteur</option>
-              <optgroup label="Consulting">
-                <option value="consulting">Conseil en management</option>
-                <option value="consulting">Conseil en strat&#233;gie</option>
-                <option value="consulting">Conseil informatique / IT</option>
-                <option value="consulting">D&#233;veloppement logiciel</option>
-                <option value="consulting">Agence digitale</option>
-                <option value="consulting">Marketing / communication</option>
-                <option value="consulting">Publicit&#233;</option>
-                <option value="consulting">Ressources humaines / recrutement</option>
-                <option value="consulting">Cabinet comptable</option>
-                <option value="consulting">Cabinet juridique</option>
-                <option value="consulting">Bureau d&#8217;&#233;tudes / ing&#233;nierie</option>
-                <option value="consulting">Formation professionnelle</option>
-              </optgroup>
-              <optgroup label="Commerce / H&#244;tel / Restaurant / Retail">
-                <option value="commerce">Commerce de d&#233;tail</option>
-                <option value="commerce">Boutique en ligne / e-commerce</option>
-                <option value="commerce">Supermarch&#233; / alimentation</option>
-                <option value="commerce">Magasin de v&#234;tements</option>
-                <option value="commerce">Magasin de meubles / d&#233;coration</option>
-                <option value="commerce">H&#244;tel</option>
-                <option value="commerce">H&#233;bergement touristique</option>
-                <option value="commerce">Restaurant traditionnel</option>
-                <option value="commerce">Restauration rapide</option>
-                <option value="commerce">Caf&#233; / bar</option>
-                <option value="commerce">Traiteur</option>
-                <option value="commerce">Commerce de gros</option>
-              </optgroup>
-              <optgroup label="Autres B2C">
-                <option value="b2c">Salon de coiffure</option>
-                <option value="b2c">Institut de beaut&#233;</option>
-                <option value="b2c">Salle de sport / fitness</option>
-                <option value="b2c">Agence immobili&#232;re</option>
-                <option value="b2c">Services &#224; domicile</option>
-                <option value="b2c">Cr&#232;che / garde d&#8217;enfants</option>
-                <option value="b2c">Cabinet m&#233;dical</option>
-                <option value="b2c">Cabinet dentaire</option>
-                <option value="b2c">Activit&#233;s de loisirs</option>
-                <option value="b2c">Agence de voyage</option>
-                <option value="b2c">Enseignement / cours particuliers</option>
-                <option value="b2c">Services personnels divers</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="calc-err-msg" id="e-sector"></div>
-        </div>
-        <button class="calc-btn" id="calc-submit">Calculer mon estimation &#8594;</button>
-        <p class="calc-note">Estimation indicative &#183; R&#233;sultat non contractuel &#183; Gratuit et sans engagement</p>
-      </div>
-      <div class="calc-panel" id="calc-panel">
-        <div class="calc-placeholder" id="calc-placeholder">
-          <div class="calc-placeholder-icon">&#128161;</div>
-          <p>Renseignez vos informations pour obtenir une estimation de votre avance de tr&#233;sorerie.</p>
-        </div>
-        <div class="calc-result" id="calc-result">
-          <div class="calc-result-tag">Estimation indicative</div>
-          <div class="calc-result-label">Fourchette d&#8217;avance disponible</div>
-          <div class="calc-range" id="r-range">&#8212;</div>
-          <div class="calc-range-sub">vers&#233;s directement sur votre compte pro</div>
-          <div class="calc-details">
-            <div class="calc-detail"><span>CA mensuel d&#233;clar&#233;</span><span id="r-ca">&#8212;</span></div>
-            <div class="calc-detail"><span>Base analys&#233;e (70%)</span><span id="r-base">&#8212;</span></div>
-            <div class="calc-detail"><span>Mise &#224; disposition par rapport &#224; votre CA</span><span id="r-taux">&#8212;</span></div>
-          </div>
-          <a href="https://form.typeform.com/to/AOjwzGiI" class="calc-result-cta">D&#233;poser ma demande gratuite &#8594;</a>
-        </div>
-        <div class="calc-error-box" id="calc-error">
-          <div class="calc-error-icon">&#9888;&#65039;</div>
-          <div class="calc-error-title" id="e-title">Crit&#232;res non remplis</div>
-          <div class="calc-error-text" id="e-text"></div>
-        </div>
       </div>
     </div>
   </div>
