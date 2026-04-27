@@ -3,8 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FlashTréso — Avance de trésorerie pour commerçants | Sans garantie | 24h</title>
+<title>Avance trésorerie commerçants — 24h, sans garantie | FlashTréso</title>
 <meta name="description" content="FlashTréso défend votre dossier auprès de partenaires financiers. Avance 2 000 à 100 000 € en 24h. Sans garantie. Sans caution.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FlashTréso",
+  "legalName": "JY Capital Consulting Ltd",
+  "url": "https://flashtreso.com",
+  "email": "contact@flashtreso.com",
+  "description": "FlashTréso est un apporteur d'affaires indépendant opéré par JY Capital Consulting Ltd. Mise en relation gratuite entre commerçants et partenaires financiers pour des avances de trésorerie de 2 000 à 100 000 € en 24h, sans garantie ni caution personnelle.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "128 City Road",
+    "addressLocality": "London",
+    "postalCode": "EC1V 2NX",
+    "addressCountry": "GB"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "UK Companies House",
+    "value": "16323005"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "La mise en relation FlashTréso est-elle vraiment gratuite ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, entièrement gratuite pour vous. FlashTréso est rémunéré par ses partenaires financiers uniquement en cas de financement accordé. Vous ne payez rien à aucune étape."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ai-je besoin de fournir une garantie ou une caution personnelle ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Le financement repose uniquement sur vos encaissements réels — pas sur vos actifs personnels, votre immobilier ou votre bilan comptable. Votre patrimoine personnel n'est pas engagé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le coût réel du financement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le partenaire applique un facteur sur le montant avancé — généralement entre 1,45 et 1,55 selon votre profil et le montant. Ce coût est présenté clairement dès le premier échange. Aucune surprise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le remboursement est-il vraiment fixé d'avance ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Le montant total à rembourser et le calendrier sont fixés avant la signature. Vous pouvez planifier votre trésorerie sereinement — pas de surprise en cours de route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon activité est saisonnière — est-ce un problème ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, au contraire. Le remboursement est indexé sur vos encaissements : vous remboursez davantage en haute saison et moins en période creuse. Conçu pour la réalité des commerces saisonniers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "FlashTréso est-il une banque ou un organisme de crédit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. FlashTréso est un apporteur d'affaires indépendant opéré par JY Capital Consulting Ltd. Nous ne gérons aucun fonds et ne délivrons aucun conseil financier réglementé. Notre rôle est de vous mettre en relation avec des partenaires financiers vérifiés."
+      }
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -118,6 +201,13 @@ h2{font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.8rem);font-we
 .reas-icon{width:46px;height:46px;border-radius:12px;background:#EEF5FF;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
 .reas-card h3{font-size:0.95rem;font-weight:700;color:#0B1120;margin-bottom:6px}
 .reas-card p{font-size:0.84rem;color:#6B7A99;line-height:1.65}
+.zones{background:#F8FAFF}
+.zones-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.zone-card{background:#fff;border:1.5px solid #E5E7EB;border-radius:14px;padding:20px 18px;transition:all .22s}
+.zone-card:hover{border-color:#1A6BFF;transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,107,255,0.1)}
+.zone-dpt{font-size:0.95rem;font-weight:700;color:#0B1120;margin-bottom:6px}
+.zone-cities{font-size:0.78rem;color:#6B7A99;line-height:1.55}
+.zones-rest{font-size:0.92rem;color:#6B7A99;line-height:1.7;margin-top:32px;padding-top:24px;border-top:1px solid #E5E7EB;max-width:780px}
 .numbers{background:#0B1120}
 .numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .number-card{text-align:center;padding:32px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px}
@@ -211,7 +301,7 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;font-size:0.75rem;color:rgba(255,255,255,0.2);text-align:center;line-height:1.6}
 [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 [data-reveal].visible{opacity:1;transform:translateY(0)}
-@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}.diff-grid{grid-template-columns:1fr}.diff-photos{display:none}.numbers-grid{grid-template-columns:1fr 1fr}.reas-grid{grid-template-columns:1fr}.steps-wrap{grid-template-columns:1fr 1fr}.steps-wrap::before{display:none}.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}.calc-wrap{grid-template-columns:1fr}.calc-panel{min-height:auto}}
+@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}.diff-grid{grid-template-columns:1fr}.diff-photos{display:none}.numbers-grid{grid-template-columns:1fr 1fr}.reas-grid{grid-template-columns:1fr}.zones-grid{grid-template-columns:1fr 1fr}.steps-wrap{grid-template-columns:1fr 1fr}.steps-wrap::before{display:none}.nav-links{display:none}.footer-grid{grid-template-columns:1fr 1fr}.calc-wrap{grid-template-columns:1fr}.calc-panel{min-height:auto}}
 @media(max-width:600px){.who-grid{grid-template-columns:1fr 1fr}.sectors-grid{grid-template-columns:1fr 1fr}.uses-grid{grid-template-columns:1fr}.reviews-grid{grid-template-columns:1fr}.steps-wrap{grid-template-columns:1fr}.compare-wrap{grid-template-columns:1fr}.stat{padding:8px 18px}.elig-sep{display:none}.hero{padding:118px 0 64px}.container{padding:0 18px}.footer-grid{grid-template-columns:1fr}.numbers-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -548,7 +638,50 @@ footer{background:#060c18;border-top:1px solid rgba(255,255,255,0.06);padding:52
     </div>
   </div>
 </section>
- 
+
+<section class="zones" data-reveal>
+  <div class="container">
+    <span class="section-tag">Zones desservies</span>
+    <h2>Disponible partout en France<br>— focus Île-de-France.</h2>
+    <p class="section-lead">FlashTréso accompagne les commerçants dans toute la France métropolitaine. Notre équipe connaît particulièrement les spécificités du marché francilien, où nos partenaires interviennent quotidiennement.</p>
+    <div class="zones-grid">
+      <div class="zone-card">
+        <div class="zone-dpt">Paris (75)</div>
+        <div class="zone-cities">Tous les arrondissements — 1er au 20e</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Seine-et-Marne (77)</div>
+        <div class="zone-cities">Meaux · Melun · Chelles · Pontault-Combault</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Yvelines (78)</div>
+        <div class="zone-cities">Versailles · Saint-Germain-en-Laye · Mantes-la-Jolie</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Essonne (91)</div>
+        <div class="zone-cities">Évry-Courcouronnes · Massy · Corbeil-Essonnes</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Hauts-de-Seine (92)</div>
+        <div class="zone-cities">Nanterre · Boulogne-Billancourt · Neuilly-sur-Seine</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Seine-Saint-Denis (93)</div>
+        <div class="zone-cities">Bobigny · Saint-Denis · Montreuil · Aubervilliers</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Val-de-Marne (94)</div>
+        <div class="zone-cities">Créteil · Vitry-sur-Seine · Vincennes · Ivry-sur-Seine</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-dpt">Val-d'Oise (95)</div>
+        <div class="zone-cities">Cergy · Argenteuil · Sarcelles · Pontoise</div>
+      </div>
+    </div>
+    <p class="zones-rest">Nous intervenons aussi dans toutes les autres régions : Lyon, Marseille, Bordeaux, Toulouse, Lille, Nantes, Strasbourg, Rennes, Nice, Montpellier… Où que soit votre commerce en France métropolitaine, votre dossier est défendu de la même manière.</p>
+  </div>
+</section>
+
 <section class="faq" id="faq" data-reveal>
   <div class="container">
     <div class="faq-inner">
